@@ -2,6 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { authRoutes } from './routes/auth';
 import type { Env } from './types';
+import { cardsRoutes } from './routes/cards';
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -19,6 +20,8 @@ app.get('/api/health', (c) => c.json({ status: 'healthy' }));
 
 // Rutas de autenticación
 app.route('/api/auth', authRoutes);
+
+app.route('/api/cards', cardsRoutes);
 
 // 404 handler
 app.notFound((c) => c.json({ detail: 'Not found' }, 404));
