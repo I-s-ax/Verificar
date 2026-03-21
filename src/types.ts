@@ -20,6 +20,31 @@ export interface User {
   created_at: string;
 }
 
+// types.ts - Añadir después de User
+
+export interface Card {
+    id: string;
+    user_id: string;
+    title: string;
+    description: string | null;
+    image_url: string | null;
+    created_at: string;
+    updated_at: string | null;
+}
+
+export interface CardInput {
+    title: string;
+    description?: string;
+    image_url?: string;
+}
+
+export interface CardUpdate {
+    title?: string;
+    description?: string;
+    image_url?: string;
+}
+
+
 export interface UserResponse {
   user_id: string;
   email: string;
@@ -60,3 +85,4 @@ export interface ResetPasswordInput {
   code: string;
   new_password: string;
 }
+
