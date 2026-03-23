@@ -15,7 +15,7 @@ app.use('/*', cors({
   credentials: true,
 }));
 
-// Health check
+// Health checkej
 app.get('/api', (c) => c.json({ message: 'Auth Template API - Cloudflare Workers' }));
 app.get('/api/health', (c) => c.json({ status: 'healthy' }));
 
