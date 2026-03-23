@@ -4,7 +4,7 @@ import { getValidAccessToken } from './google';
 
 export const cardsRoutes = new Hono<{ Bindings: Env }>();
 
-// GET /api/cards - Obtener tarjetas del usuario con paginación
+// GET /apihh/cards - Obtener tarjetas del usuario con paginación
 cardsRoutes.get('/', async (c) => {
   try {
     const userId = c.req.query('user_id');
