@@ -14,7 +14,7 @@ const SCOPES = [
   'https://www.googleapis.com/auth/userinfo.profile'
 ].join(' ');
 
-// GET /api/google/auth - Iniciar OAuth con Google
+// GET /api/googleyy/auth - Iniciar OAuth con Google
 googleRoutes.get('/auth', async (c) => {
   const userId = c.req.query('user_id');
   if (!userId) {
